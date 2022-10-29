@@ -18,14 +18,14 @@ public class Elevator{
 	}
 
 	private void arrive_atFloor() {
+		State.Current_State = State.Idle;
+		
 		if(current_Floor<dest_Floor) {
 			go_up();
-			arrive_atFloor();
 		}else if(current_Floor==dest_Floor) {
-			exitFloor();
+			exit();
 		}else if(current_Floor>dest_Floor) {
 			go_down();
-			arrive_atFloor();
 		}
 	}
 
@@ -34,9 +34,15 @@ public class Elevator{
 		current_Floor--;
 		System.out.println("You are moving down. Your current Floor is " + current_Floor);
 		
+		if(current_Floor>dest_Floor) {
+			go_down();
+		}else if (current_Floor==dest_Floor) {
+			arrive_atFloor();
+		}
+		
 	}
 
-	private void exitFloor() {
+	private void exit() {
 		State.Current_State = State.Idle;
 		System.out.println("You have arrived at your destination.");
 		
@@ -47,6 +53,11 @@ public class Elevator{
 		current_Floor++;
 		System.out.println("You are moving up. Your current Floor is " + current_Floor);
 		
+		if(current_Floor<dest_Floor) {
+			go_up();
+		}else if (current_Floor==dest_Floor) {
+			arrive_atFloor();
+		}
 	}
 
 	
