@@ -10,7 +10,7 @@ public static void main(String[] args) {
 		
 
 		//Initialise some household
-		List<HouseholdItem> householdItmes= new ArrayList<>();
+		List<HouseholdItem> householdItems= new ArrayList<>();
 
 		
 		Electronic microwaveOven= new Electronic("Microwave Oven",37, 48, 27, 13, false);
@@ -24,9 +24,12 @@ public static void main(String[] args) {
 		Furniture cupboard= new Furniture("Bookshelf", "Wood", 60, 31, 190, 25);
 		
 		
-        List<HouseholdItem> namesList = Arrays.asList(microwaveOven,tv,wineGlass,coffeeTable,bed,cupboard );
-        householdItmes.addAll(namesList);
+        List<HouseholdItem> namesList = Arrays.asList(microwaveOven,tv,wineGlass,coffeeTable,bed,cupboard);
+        householdItems.addAll(namesList);
 		
+       
+        CalculatorVisitor visitor = new CalculatorVisitor();
+        visitor.calculate(householdItems);
   
 }
 

@@ -4,7 +4,7 @@ public class Electronic implements HouseholdItem{
 	
 	String name;
 	
-	int lenght;
+	int length;
 	int width;
 	int height;
 
@@ -14,13 +14,17 @@ public class Electronic implements HouseholdItem{
 	
 
 
-	public Electronic(String name, int lenght, int width, int height, int weight, Boolean fragile) {
+	public Electronic(String name, int length, int width, int height, int weight, Boolean fragile) {
 		this.name = name;
-		this.lenght = lenght;
+		this.length = length;
 		this.width = width;
 		this.height = height;
 		this.weight = weight;
 		this.fragile = fragile;
+	}
+	
+	public void accept(Visitor visitor) {
+		visitor.visitElectronic(this);
 	}
 
 	
@@ -33,10 +37,10 @@ public class Electronic implements HouseholdItem{
 		this.height = height;}
 
 	public int getLenght() {
-		return lenght;}
+		return length;}
 
 	public void setLenght(Integer lenght) {
-		this.lenght = lenght;}
+		this.length = lenght;}
 
 	public int getWidth() {
 		return width;}

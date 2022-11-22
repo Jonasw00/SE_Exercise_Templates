@@ -6,20 +6,24 @@ public class Furniture implements HouseholdItem{
 	String type;
 
 
-	int lenght;
+	int length;
 	int width;
 	int height;
 	
 	int weight;
 
 	
-	public Furniture(String name, String type, int lenght, int width, int height, int weight) {
+	public Furniture(String name, String type, int length, int width, int height, int weight) {
 		this.name = name;
 		this.type = type;
-		this.lenght = lenght;
+		this.length = length;
 		this.width = width;
 		this.height = height;
 		this.weight = weight;
+	}
+	
+	public void accept(Visitor visitor) {
+		visitor.visitFurniture(this);
 	}
 
 
@@ -35,11 +39,11 @@ public class Furniture implements HouseholdItem{
 	public void setHeight(Integer height) {
 		this.height = height;}
 
-	public int getLenght() {
-		return lenght;}
+	public int getlength() {
+		return length;}
 
-	public void setLenght(Integer lenght) {
-		this.lenght = lenght;}
+	public void setlength(Integer length) {
+		this.length = length;}
 
 	public int getWidth() {
 		return width;	}

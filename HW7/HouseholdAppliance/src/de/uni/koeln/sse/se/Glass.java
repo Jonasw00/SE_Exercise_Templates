@@ -3,20 +3,24 @@ package de.uni.koeln.sse.se;
 public class Glass implements HouseholdItem{
 	
 	String name;
-	int lenght;
+	int length;
 	int width;
 	int height;
 
-	int tickness;
+	int thickness;
 
 	
-	public Glass(String name, int lenght, int width, int height, int tickness) {
+	public Glass(String name, int length, int width, int height, int thickness) {
 		this.name = name;
-		this.lenght = lenght;
+		this.length = length;
 		this.width = width;
 		this.height = height;
-		this.tickness = tickness;
+		this.thickness = thickness;
 	
+	}
+	
+	public void accept(Visitor visitor) {
+		visitor.visitGlass(this);
 	}
 
 
@@ -29,11 +33,11 @@ public class Glass implements HouseholdItem{
 	public void setHeight(int height) {
 		this.height = height;}
 
-	public int getLenght() {
-		return lenght;}
+	public int getlength() {
+		return length;}
 
-	public void setLenght(int lenght) {
-		this.lenght = lenght;}
+	public void setlength(int length) {
+		this.length = length;}
 
 	public int getWidth() {
 		return width;}
@@ -41,11 +45,11 @@ public class Glass implements HouseholdItem{
 	public void setWidth(int width) {
 		this.width = width;}
 
-	public Integer getTickness() {
-		return tickness;}
+	public Integer getthickness() {
+		return thickness;}
 
-	public void setTickness(int tickness) {
-		this.tickness = tickness;}
+	public void setthickness(int thickness) {
+		this.thickness = thickness;}
 
 	public String getName() {
 		return name;
