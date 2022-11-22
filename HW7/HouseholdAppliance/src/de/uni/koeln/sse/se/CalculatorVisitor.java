@@ -18,7 +18,7 @@ public class CalculatorVisitor implements Visitor {
 			cost = electronic.weight*0.3333333333;
 		}
 		System.out.println("Total Cost for " + electronic.name + " is: " + cost + " Euros");
-		System.out.println(electronic.name+ ": \n >should be covered with Polyethylene foam film and packed in a box with dimension: " + (electronic.height+1) + "x" + (electronic.length+1) + "x" + (electronic.width+1));
+		//System.out.println(electronic.name+ ": \n >should be covered with Polyethylene foam film and packed in a box with dimension: " + (electronic.height+1) + "x" + (electronic.length+1) + "x" + (electronic.width+1));
 		
 	}
 	
@@ -26,7 +26,7 @@ public class CalculatorVisitor implements Visitor {
 			double cost = furniture.weight*0.25;
 		
 		System.out.println("Total Cost for " + furniture.name + " is: " + cost + " Euros");
-		System.out.println(furniture.name+ ": \n >should be covered with waterproof covers with area of:" + furniture.length+ "x" + furniture.width);
+		//System.out.println(furniture.name+ ": \n >should be covered with waterproof covers with area of:" + furniture.length+ "x" + furniture.width);
 		
 	}
 		
@@ -42,7 +42,7 @@ public class CalculatorVisitor implements Visitor {
 			cost = glass.length*0.007;
 		}
 		System.out.println("Total Cost for " + glass.name + " is: " + cost + " Euros");
-		System.out.println(glass.name+ ": \n >should be wrapped with Bubble wraps and packed in a box with dimension: " + (glass.height+1) + "x" + (glass.length+1) + "x" + (glass.width+1));
+		//System.out.println(glass.name+ ": \n >should be wrapped with Bubble wraps and packed in a box with dimension: " + (glass.height+1) + "x" + (glass.length+1) + "x" + (glass.width+1));
 		
 	}
 }

@@ -30,6 +30,9 @@ public static void main(String[] args) {
        
         CalculatorVisitor visitor = new CalculatorVisitor();
         visitor.calculate(householdItems);
+        
+        PackingVisitor visitor1 = new PackingVisitor();
+        visitor1.calculate(householdItems);
   
 }
 
